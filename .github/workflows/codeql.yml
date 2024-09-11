@@ -66,7 +66,7 @@ jobs:
         packs: +advanced-security/autosar-cpp-coding-standards-uncertified
 
     - name: Build
-      run: make MATCHCOMPILTER=yes CXXFLAGS="-O2" -j8
+      run: cd drivers/linux && make all
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
