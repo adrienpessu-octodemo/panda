@@ -66,7 +66,7 @@ jobs:
         packs: +advanced-security/autosar-cpp-coding-standards-uncertified
 
     - name: Build
-      run: pip install -e .[dev] && python setup.py install
+      run: make MATCHCOMPILTER=yes CXXFLAGS="-O2" -j8
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
